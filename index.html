@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolívar 248 · Centro Histórico · Proyección Airbnb · Distrito BA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2E5634;--green-dark:#1e3b22;--cream:#F2EFEB;--gold:#C9A84C;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:#222;}
+nav{background:var(--green-dark);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:50px;position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Bakbak One',sans-serif;color:var(--gold);font-size:1rem;letter-spacing:1px;}
+.nav-links{display:flex;gap:1rem;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.72rem;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;}
+.hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 60%,#3d7044 100%);color:white;padding:3rem 1.5rem 2.5rem;text-align:center;}
+.hero-badge{display:inline-block;background:rgba(201,168,76,0.2);border:1px solid var(--gold);color:var(--gold);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:20px;margin-bottom:1.25rem;}
+.hero h1{font-family:'Bakbak One',sans-serif;font-size:1.6rem;margin-bottom:0.4rem;}
+.hero p{color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:2rem;}
+.hero-stats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat-value{font-family:'Bakbak One',sans-serif;font-size:1.8rem;color:var(--gold);display:block;}
+.stat-label{font-size:0.68rem;color:rgba(255,255,255,0.55);letter-spacing:1px;text-transform:uppercase;margin-top:0.2rem;}
+sec{display:block;padding:2.5rem 1.5rem;max-width:900px;margin:0 auto;}
+.stag{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:0.4rem;}
+h2{font-family:'Bakbak One',sans-serif;font-size:1.5rem;color:var(--green-dark);margin-bottom:1.25rem;}
+hr{border:none;border-top:1px solid rgba(0,0,0,0.08);}
+.historia{background:white;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;border-left:4px solid var(--gold);}
+.historia h3{font-family:'Bakbak One',sans-serif;font-size:1rem;color:var(--green-dark);margin-bottom:0.5rem;}
+.historia p{font-size:0.85rem;color:#555;line-height:1.7;}
+.depto-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;}
+.depto-info p{font-size:0.88rem;line-height:1.7;color:#444;margin-bottom:0.75rem;}
+.am-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;}
+.am{background:white;border-radius:8px;padding:0.6rem 0.8rem;font-size:0.8rem;font-weight:500;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:0.4rem;}
+.am.gold{border-color:var(--gold);background:rgba(201,168,76,0.06);}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1.5rem;}
+.mstat{background:white;border-radius:10px;padding:1rem;text-align:center;border:1px solid rgba(0,0,0,0.06);}
+.mstat .v{font-family:'Bakbak One',sans-serif;font-size:1.4rem;color:var(--green);}
+.mstat .l{font-size:0.7rem;color:#666;margin-top:0.2rem;}
+table.mt{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;font-size:0.8rem;margin-top:0.75rem;}
+table.mt th{background:var(--green);color:white;padding:0.6rem 0.8rem;text-align:left;font-size:0.7rem;text-transform:uppercase;}
+table.mt td{padding:0.6rem 0.8rem;border-bottom:1px solid rgba(0,0,0,0.05);}
+table.mt tr:last-child td{border-bottom:none;}
+table.mt tr:nth-child(even) td{background:rgba(242,239,235,0.5);}
+.hlrow td{background:rgba(201,168,76,0.1)!important;font-weight:600;}
+.mnote{font-size:0.72rem;color:#888;margin-top:0.75rem;font-style:italic;}
+.hint{font-size:0.85rem;color:#555;line-height:1.6;margin-bottom:1.25rem;}
+.hw{overflow-x:auto;margin-bottom:1.75rem;}
+table.hm{border-collapse:collapse;font-size:0.72rem;min-width:580px;width:100%;}
+table.hm th{padding:0.45rem 0.6rem;text-align:center;background:var(--green);color:white;font-weight:500;font-size:0.7rem;}
+table.hm th:first-child{text-align:left;min-width:52px;}
+table.hm td{padding:0.4rem 0.55rem;text-align:center;border:1px solid rgba(255,255,255,0.2);}
+.btitle{font-size:0.82rem;font-weight:600;color:var(--green-dark);margin:1.5rem 0 0.6rem;}
+table.bt{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;font-size:0.82rem;}
+table.bt th{background:var(--green);color:white;padding:0.6rem 0.9rem;text-align:right;font-size:0.7rem;text-transform:uppercase;}
+table.bt th:first-child{text-align:left;}
+table.bt td{padding:0.55rem 0.9rem;border-bottom:1px solid rgba(0,0,0,0.05);text-align:right;}
+table.bt td:first-child{text-align:left;color:#666;}
+table.bt tr:nth-child(even) td{background:rgba(242,239,235,0.4);}
+table.bt .sub td{border-top:1px solid rgba(0,0,0,0.1);font-weight:600;}
+table.bt .sub td:first-child{color:var(--green-dark);}
+table.bt .tot td{background:var(--green)!important;color:white;font-weight:700;}
+.neg{color:#c0392b!important;}
+table.mly{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;font-size:0.82rem;margin-bottom:1.5rem;}
+table.mly th{background:var(--green);color:white;padding:0.6rem 0.9rem;text-align:right;font-size:0.7rem;text-transform:uppercase;}
+table.mly th:first-child{text-align:left;}
+table.mly td{padding:0.55rem 0.9rem;border-bottom:1px solid rgba(0,0,0,0.05);text-align:right;}
+table.mly td:first-child{text-align:left;font-weight:500;}
+table.mly tr:nth-child(even) td{background:rgba(242,239,235,0.5);}
+table.mly .tr td{background:var(--gold)!important;color:white;font-weight:700;}
+.cc{background:white;border-radius:14px;padding:1.25rem;margin-bottom:1.5rem;}
+.ct{font-size:0.72rem;color:#888;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:1px;}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+.si{background:white;border-radius:10px;padding:1.1rem;border:1px solid rgba(0,0,0,0.06);}
+.si h4{font-size:0.85rem;font-weight:600;color:var(--green-dark);margin-bottom:0.4rem;}
+.si p{font-size:0.78rem;color:#555;line-height:1.6;}
+footer{background:var(--green-dark);color:rgba(255,255,255,0.55);text-align:center;padding:1.5rem;font-size:0.75rem;}
+footer strong{color:var(--gold);}
+@media(max-width:640px){.depto-grid{grid-template-columns:1fr;}.mstats{grid-template-columns:repeat(2,1fr);}.sgrid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">DISTRITO BA</span>
+  <div class="nav-links">
+    <a href="#depto">El Depto</a>
+    <a href="#mercado">Mercado</a>
+    <a href="#heatmap">Escenarios</a>
+    <a href="#proy">Proyección</a>
+    <a href="#est">Estrategia</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Proyección Airbnb · Distrito BA</div>
+  <h1>Bolívar 248 · Centro Histórico</h1>
+  <p>Estudio · 3 huéspedes · Microcentro · CABA</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-value">$60/n</span><span class="stat-label">Precio base</span></div>
+    <div class="stat"><span class="stat-value">80%</span><span class="stat-label">Ocupación base</span></div>
+    <div class="stat"><span class="stat-value">$723/mes</span><span class="stat-label">Neto mensual (con PM)</span></div>
+  </div>
+</div>
+
+<hr>
+
+<sec id="depto">
+  <p class="stag">01 · El Depto</p>
+  <h2>El departamento</h2>
+
+  <div class="historia">
+    <h3>🏛️ Bolívar 248 — Un palacio neoclásico en el corazón de Buenos Aires</h3>
+    <p>Construido en la década de 1920 en pleno auge arquitectónico de la ciudad, el edificio de Bolívar 248 es un testimonio del Buenos Aires de entreguerras: fachada neoclásica, entrada de doble altura con columnas monumentales, y una presencia edilicia que domina la cuadra. A metros del <strong>Colegio Nacional Buenos Aires</strong>, de la <strong>Manzana de las Luces</strong> —el primer complejo educativo del Virreinato del Río de la Plata—, y a una caminata tranquila de la Plaza de Mayo, la Casa Rosada y la Catedral Metropolitana. Este estudio no es solo un alojamiento: es una puerta de entrada a la historia viva de Buenos Aires.</p>
+  </div>
+
+  <div class="depto-grid">
+    <div class="depto-info">
+      <p>Estudio para hasta 3 huéspedes en uno de los edificios más elegantes del Centro Histórico. El propietario describe la propiedad como "un tributo a la elegancia", en sintonía con el espíritu neoclásico del edificio. Piscina y bar/restaurante en planta baja, CoWork disponible para estadías largas.</p>
+      <p>Microcentro es el barrio con mejor conectividad de Buenos Aires: múltiples líneas de subte, colectivos, ferrocarril, y a pasos del eje turístico Plaza de Mayo–San Telmo–Puerto Madero. Perfil de huésped ideal: turistas culturales europeos y norteamericanos, ejecutivos en tránsito y nómadas digitales.</p>
+    </div>
+    <div class="am-grid">
+      <div class="am gold">🏊 Piscina en planta baja</div>
+      <div class="am gold">🍽️ Bar/restaurante en el edificio</div>
+      <div class="am gold">💻 CoWork disponible</div>
+      <div class="am gold">🏛️ Edificio neoclásico 1920s</div>
+      <div class="am">📍 Frente a Manzana de las Luces</div>
+      <div class="am">🏛️ A pasos de Plaza de Mayo</div>
+      <div class="am">🎭 Cerca del Teatro Colón</div>
+      <div class="am">☕ A metros del Café Tortoni</div>
+      <div class="am">🚇 Conectividad total (Subte ABCD)</div>
+      <div class="am">❄️ Aire acondicionado</div>
+      <div class="am">🍳 Cocina equipada</div>
+      <div class="am">🔒 Seguridad 24hs</div>
+    </div>
+  </div>
+</sec>
+
+<hr>
+
+<sec id="mercado">
+  <p class="stag">02 · Mercado</p>
+  <h2>Análisis de mercado</h2>
+  <div class="mstats">
+    <div class="mstat"><div class="v">$71</div><div class="l">ADR mediana CABA</div></div>
+    <div class="mstat"><div class="v">$114+</div><div class="l">ADR top 10% CABA</div></div>
+    <div class="mstat"><div class="v">71%</div><div class="l">Ocupación media CABA</div></div>
+    <div class="mstat"><div class="v">$95</div><div class="l">ADR promedio julio 2026</div></div>
+    <div class="mstat"><div class="v">Premium</div><div class="l">Diferencial por amenities</div></div>
+    <div class="mstat"><div class="v">Alta</div><div class="l">Demanda turismo cultural</div></div>
+  </div>
+  <table class="mt">
+    <thead><tr><th>Segmento</th><th>ADR</th><th>Ocupación</th><th>Notas</th></tr></thead>
+    <tbody>
+      <tr><td>Mercado CABA (mediana)</td><td>~$71/n</td><td>~71%</td><td>Promedio ciudad, todo tipo de propiedad</td></tr>
+      <tr><td>Top 10% CABA</td><td>$114+/n</td><td>88%+</td><td>Propiedades premium con diferenciadores</td></tr>
+      <tr><td>Studio básico Microcentro/San Nicolás</td><td>$40-60/n</td><td>65-75%</td><td>Sin amenities, sin historia arquitectónica</td></tr>
+      <tr><td>Studio premium con piscina + restaurante</td><td>$70-100/n</td><td>75-85%</td><td>Diferenciadores fuertes como Bolívar 248</td></tr>
+      <tr class="hlrow"><td><strong>Bolívar 248 — escenario base</strong></td><td><strong>$60/n</strong></td><td><strong>80%</strong></td><td>Con badge Guest Favorite, gestión profesional</td></tr>
+      <tr><td>Potencial optimista (posicionado)</td><td>$80/n</td><td>90%</td><td>Top 20% mercado, pricing dinámico activo</td></tr>
+    </tbody>
+  </table>
+  <p class="mnote">Fuentes: AirROI STR Report 2026 · Airbtics Buenos Aires 2026 · GuestFavorites julio 2026 · Relevamiento de anuncios activos en San Nicolás/Microcentro.</p>
+</sec>
+
+<hr>
+
+<sec id="heatmap">
+  <p class="stag">03 · Mapa de calor</p>
+  <h2>¿Cuánto podés ganar?</h2>
+  <p class="hint">Neto mensual para el propietario según precio/noche y ocupación. Descuenta comisión Airbnb (15,5%) + PM Distrito BA (20%) + expensas ($250/mes). La celda <strong>★</strong> es el escenario base ($60/n · 80%).</p>
+  <div class="hw"><table class="hm" id="hmTbl"></table></div>
+
+  <div class="btitle">Desglose del ingreso neto por escenario</div>
+  <table class="bt">
+    <thead><tr><th>Concepto</th><th>Conservador<br><small>$50/n · 75%</small></th><th>Base<br><small>$60/n · 80%</small></th><th>Optimista<br><small>$80/n · 90%</small></th></tr></thead>
+    <tbody>
+      <tr><td>Ingreso bruto mensual</td><td>$1.125</td><td>$1.440</td><td>$2.160</td></tr>
+      <tr><td class="neg">— Comisión Airbnb (15,5%)</td><td class="neg">−$174</td><td class="neg">−$223</td><td class="neg">−$335</td></tr>
+      <tr class="sub"><td>= Neto post-comisión</td><td>$951</td><td>$1.217</td><td>$1.825</td></tr>
+      <tr><td class="neg">— PM Distrito BA (20%)</td><td class="neg">−$190</td><td class="neg">−$243</td><td class="neg">−$365</td></tr>
+      <tr class="sub"><td>= Neto post-PM</td><td>$761</td><td>$973</td><td>$1.460</td></tr>
+      <tr><td class="neg">— Expensas y servicios</td><td class="neg">−$250</td><td class="neg">−$250</td><td class="neg">−$250</td></tr>
+      <tr class="tot"><td>= Neto mensual propietario (con PM)</td><td>$511</td><td>$723</td><td>$1.210</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.72rem;color:#888;margin-top:0.6rem;">Las expensas de $250/mes incluyen los servicios del edificio (piscina, seguridad, mantenimiento). Sin PM: $701 / $967 / $1.575 respectivamente.</p>
+</sec>
+
+<hr>
+
+<sec id="proy">
+  <p class="stag">04 · Proyección 12M</p>
+  <h2>Proyección mensual — escenario base</h2>
+  <table class="mly">
+    <thead><tr><th>Mes</th><th style="text-align:right">Factor</th><th style="text-align:right">Bruto</th><th style="text-align:right">Neto sin PM</th><th style="text-align:right">Neto con PM</th></tr></thead>
+    <tbody id="mlyBody"></tbody>
+  </table>
+  <div class="cc"><div class="ct">Ingresos anuales por escenario (USD)</div><div id="chartWrap"></div></div>
+</sec>
+
+<hr>
+
+<sec id="est">
+  <p class="stag">05 · Estrategia</p>
+  <h2>Estrategia de gestión</h2>
+  <div class="sgrid">
+    <div class="si"><h4>🏛️ El edificio como protagonista</h4><p>Un palacio neoclásico de 1920s con entrada de doble altura y columnas monumentales en el Centro Histórico. El título del anuncio debe evocar esto: "Estudio neoclásico frente a la Manzana de las Luces" o "Elegancia porteña a pasos de Plaza de Mayo". El edificio es el diferenciador principal.</p></div>
+    <div class="si"><h4>🏊 Piscina + restaurante = conversión</h4><p>Pool y bar/restaurante propios en el centro de Buenos Aires son un combo casi imposible de encontrar en Airbnb en CABA. Las fotos de la piscina y el restaurante deben estar entre las primeras 5 imágenes del anuncio. Son el principal motor de conversión y justifican un precio por encima de la competencia.</p></div>
+    <div class="si"><h4>💻 CoWork para estadías largas</h4><p>El espacio de CoWork es un imán para nómadas digitales y ejecutivos con estadías de 7-30 noches. Este segmento tiene menor rotación (menos check-in/out, menos limpieza) y mayor ticket promedio. Mencionar explícitamente en el anuncio: "CoWork disponible en el edificio".</p></div>
+    <div class="si"><h4>📍 La ubicación como activo</h4><p>Frente al Colegio Nacional y la Manzana de las Luces. A pasos de Plaza de Mayo, Casa Rosada, Catedral Metropolitana, Café Tortoni y Teatro Colón. Este circuito de atracciones es el top 1 de visitas para turistas europeos y norteamericanos. Nombrarlos todos en la descripción.</p></div>
+    <div class="si"><h4>🎭 Turismo cultural de alto valor</h4><p>El perfil ideal: turista europeo/norteamericano que viaja a Buenos Aires por cultura, historia y gastronomía (no por economía). Este perfil acepta precios más altos y deja mejores reseñas. El storytelling del edificio 1920s + la ubicación histórica lo atrae naturalmente.</p></div>
+    <div class="si"><h4>📅 Posicionamiento y precio</h4><p>Publicar a $50/n al inicio para acumular <strong>10 calificaciones de 5 estrellas</strong> y obtener el badge Guest Favorite. Luego subir $3-5/noche cada 3-4 semanas hasta alcanzar $60 (precio base) y $80+ en temporada alta.</p></div>
+  </div>
+
+  <div class="btitle" style="margin-top:1.75rem;">Roadmap de posicionamiento y precios</div>
+  <div style="background:white;border-radius:10px;padding:1.25rem;border:1px solid rgba(0,0,0,0.06);">
+    <p style="font-size:0.82rem;color:#444;line-height:1.7;margin-bottom:1.25rem;">El precio optimista <strong>no se alcanza desde el día 1</strong>. Hay que posicionar el anuncio dentro de la plataforma a través de calificaciones positivas antes de subir el precio. El camino es gradual — pero la propiedad tiene todos los ingredientes para destacarse: edificio icónico, amenities diferenciales, ubicación histórica excepcional.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;">
+      <div style="border-left:3px solid var(--gold);padding-left:0.75rem;">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:600;margin-bottom:0.3rem;">Fase 1 · Mes 1-2</div>
+        <div style="font-size:0.82rem;font-weight:600;color:var(--green-dark);margin-bottom:0.25rem;">Arranque</div>
+        <p style="font-size:0.75rem;color:#555;line-height:1.5;">Publicar a $50/n. Prioridad: primeras reservas y calificaciones. No maximizar ingreso todavía.</p>
+      </div>
+      <div style="border-left:3px solid var(--gold);padding-left:0.75rem;">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:600;margin-bottom:0.3rem;">Fase 2 · Mes 2-4</div>
+        <div style="font-size:0.82rem;font-weight:600;color:var(--green-dark);margin-bottom:0.25rem;">Guest Favorite ⭐</div>
+        <p style="font-size:0.75rem;color:#555;line-height:1.5;">Con <strong>10 calificaciones de 5 estrellas</strong>, Airbnb otorga el badge. Mayor visibilidad y confianza del huésped.</p>
+      </div>
+      <div style="border-left:3px solid var(--gold);padding-left:0.75rem;">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:600;margin-bottom:0.3rem;">Fase 3 · Mes 3-6</div>
+        <div style="font-size:0.82rem;font-weight:600;color:var(--green-dark);margin-bottom:0.25rem;">Escalado gradual</div>
+        <p style="font-size:0.75rem;color:#555;line-height:1.5;">Subir <strong>$3-5/noche cada 3-4 semanas</strong>. Si la ocupación cae del 75%, pausar la suba.</p>
+      </div>
+      <div style="border-left:3px solid var(--green);padding-left:0.75rem;">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--green);font-weight:600;margin-bottom:0.3rem;">Fase 4 · Mes 6+</div>
+        <div style="font-size:0.82rem;font-weight:600;color:var(--green-dark);margin-bottom:0.25rem;">Precio optimista</div>
+        <p style="font-size:0.75rem;color:#555;line-height:1.5;">$60-80/n con anuncio consolidado, reviews, badge activo y pricing dinámico por temporada.</p>
+      </div>
+    </div>
+  </div>
+</sec>
+
+<footer>
+  <strong>Distrito BA</strong> · Gestión profesional de alquileres temporarios<br>
+  <span style="margin-top:0.4rem;display:block;">AirROI STR Report 2026 · Airbtics Buenos Aires 2026 · GuestFavorites julio 2026 · Datos julio 2026</span>
+</footer>
+
+<script>
+const prices=[35,40,50,55,60,65,70,75,80,90];
+const occs=[0.70,0.75,0.80,0.85,0.90,0.95];
+const COM=0.155,PM=0.20,EXP=250,BP=60,BO=0.80;
+
+function hc(v,mn,mx){
+  const r=Math.max(0,Math.min(1,(v-mn)/(mx-mn)));
+  return`rgb(${Math.round(255-r*209)},${Math.round(255-r*169)},${Math.round(255-r*203)})`;
+}
+
+// Heatmap shows net_conPM
+const all=occs.flatMap(o=>prices.map(p=>p*30*o*(1-COM)*(1-PM)-EXP));
+const mn=Math.min(...all),mx=Math.max(...all);
+const t=document.getElementById('hmTbl');
+const h=document.createElement('tr');
+h.innerHTML='<th>Occ \\ $/n</th>'+prices.map(p=>`<th>$${p}</th>`).join('');
+t.appendChild(h);
+occs.forEach(o=>{
+  const tr=document.createElement('tr');
+  const th=document.createElement('th');
+  th.textContent=Math.round(o*100)+'%';
+  tr.appendChild(th);
+  prices.forEach(p=>{
+    const net=p*30*o*(1-COM)*(1-PM)-EXP;
+    const isB=p===BP&&o===BO;
+    const td=document.createElement('td');
+    const bg=isB?'#C9A84C':hc(net,mn,mx);
+    const ratio=(net-mn)/(mx-mn);
+    const fg=isB?'white':(ratio>0.55?'white':'#222');
+    td.style.cssText=`background:${bg};color:${fg};font-weight:${isB?700:400}`;
+    td.textContent=(isB?'★ ':'')+'$'+Math.round(net).toLocaleString('es-AR');
+    tr.appendChild(td);
+  });
+  t.appendChild(tr);
+});
+
+const MESES=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+const FACTOR=[1.10,1.15,1.05,0.95,0.85,0.85,1.10,0.90,0.90,0.90,1.10,1.15];
+const baseBruto=BP*30*BO;
+const basePostCom=baseBruto*(1-COM);
+const basePostPM=basePostCom*(1-PM);
+
+// Tabla mensual: estacionalidad aplica al bruto/postCom; EXP es fijo por mes
+let tBr=0,tNs=0,tNc=0;
+const tbody=document.getElementById('mlyBody');
+MESES.forEach((m,i)=>{
+  const f=FACTOR[i];
+  const br=Math.round(baseBruto*f);
+  const ns=Math.round(basePostCom*f - EXP);
+  const nc=Math.round(basePostPM*f - EXP);
+  tBr+=br; tNs+=ns; tNc+=nc;
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td>${m}</td><td style="text-align:right">${f.toFixed(2)}</td><td style="text-align:right">$${br.toLocaleString('es-AR')}</td><td style="text-align:right">$${ns.toLocaleString('es-AR')}</td><td style="text-align:right">$${nc.toLocaleString('es-AR')}</td>`;
+  tbody.appendChild(tr);
+});
+const tot=document.createElement('tr');
+tot.className='tr';
+tot.innerHTML=`<td>TOTAL ANUAL</td><td style="text-align:right">12,00</td><td style="text-align:right">$${tBr.toLocaleString('es-AR')}</td><td style="text-align:right">$${tNs.toLocaleString('es-AR')}</td><td style="text-align:right">$${tNc.toLocaleString('es-AR')}</td>`;
+tbody.appendChild(tot);
+
+function calcAnual(price,occ){
+  const mB=price*30*occ;
+  const postCom=mB*(1-COM);
+  const postPM=postCom*(1-PM);
+  let tBr=0,tNs=0,tNc=0;
+  FACTOR.forEach(f=>{
+    tBr+=Math.round(mB*f);
+    tNs+=Math.round(postCom*f - EXP);
+    tNc+=Math.round(postPM*f - EXP);
+  });
+  return{bruto:tBr,sinPM:tNs,conPM:tNc};
+}
+const cons=calcAnual(50,0.75);
+const base=calcAnual(60,0.80);
+const opt=calcAnual(80,0.90);
+
+// SVG bar chart — sin dependencias externas
+(function(){
+  const scenarios=[
+    {lbl:['Conservador','$50 · 75%'], b:cons.bruto, s:cons.sinPM, c:cons.conPM},
+    {lbl:['Base','$60 · 80%'],        b:base.bruto, s:base.sinPM, c:base.conPM},
+    {lbl:['Optimista','$80 · 90%'],   b:opt.bruto,  s:opt.sinPM,  c:opt.conPM}
+  ];
+  const maxV=Math.max(...scenarios.map(s=>s.b));
+  const W=820,H=220,PAD_L=62,PAD_R=16,PAD_T=12,PAD_B=52;
+  const chartW=W-PAD_L-PAD_R, chartH=H-PAD_T-PAD_B;
+  const colors={b:'rgba(100,149,237,0.75)',s:'rgba(201,168,76,0.9)',c:'rgba(46,86,52,0.85)'};
+  const nScen=scenarios.length, nBars=3, gap=18, groupGap=32;
+  const totalGaps=nScen*(nBars-1)*gap+(nScen-1)*groupGap;
+  const barW=Math.floor((chartW-totalGaps)/(nScen*nBars));
+  function px(v){return chartH-(v/maxV)*chartH;}
+  function fmt(v){return '$'+(v/1000).toFixed(0)+'k';}
+
+  let svg=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:Inter,sans-serif">`;
+
+  // Y grid lines
+  [0,0.25,0.5,0.75,1].forEach(t=>{
+    const y=PAD_T+chartH*t;
+    const val=Math.round(maxV*(1-t));
+    svg+=`<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="#eee" stroke-width="1"/>`;
+    svg+=`<text x="${PAD_L-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#999">${fmt(val)}</text>`;
+  });
+
+  // Bars
+  scenarios.forEach((sc,gi)=>{
+    const groupX=PAD_L+gi*(nBars*barW+(nBars-1)*gap+groupGap);
+    const vals=[sc.b,sc.s,sc.c];
+    const cols=[colors.b,colors.s,colors.c];
+    vals.forEach((v,bi)=>{
+      const x=groupX+bi*(barW+gap);
+      const bh=(v/maxV)*chartH;
+      const y=PAD_T+chartH-bh;
+      svg+=`<rect x="${x}" y="${y}" width="${barW}" height="${bh}" rx="3" fill="${cols[bi]}"/>`;
+      if(bh>18) svg+=`<text x="${x+barW/2}" y="${y+12}" text-anchor="middle" font-size="9" fill="white" font-weight="600">${fmt(v)}</text>`;
+    });
+    // Group label
+    const cx=groupX+((nBars*barW+(nBars-1)*gap)/2);
+    svg+=`<text x="${cx}" y="${H-32}" text-anchor="middle" font-size="11" font-weight="600" fill="#333">${sc.lbl[0]}</text>`;
+    svg+=`<text x="${cx}" y="${H-18}" text-anchor="middle" font-size="10" fill="#888">${sc.lbl[1]}</text>`;
+  });
+
+  // Legend
+  const legItems=[['Bruto',colors.b],['Neto sin PM',colors.s],['Neto con PM',colors.c]];
+  let lx=PAD_L;
+  legItems.forEach(([lbl,col])=>{
+    svg+=`<rect x="${lx}" y="2" width="10" height="10" rx="2" fill="${col}"/>`;
+    svg+=`<text x="${lx+14}" y="11" font-size="10" fill="#555">${lbl}</text>`;
+    lx+=lbl.length*6+28;
+  });
+
+  svg+='</svg>';
+  document.getElementById('chartWrap').innerHTML=svg;
+})();
+</script>
+</body>
+</html>
